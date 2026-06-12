@@ -261,7 +261,7 @@ function handleWsUpgrade(req, socket) {
         to: target,
         name,
         text: String(body.text || "").trim().slice(0, 2000),
-        description: body.description || null, candidate: body.candidate || null, description: body.description || null, candidate: body.candidate || null, data: body.data || null,
+        description: body.description || null, candidate: body.candidate || null, data: body.data || null,
         at: Date.now()
       };
 
@@ -358,7 +358,7 @@ const server = http.createServer(async (req, res) => {
         to: target,
         name: String(body.name || "").trim().slice(0, 32),
         text: String(body.text || "").trim().slice(0, 2000),
-        description: body.description || null, candidate: body.candidate || null, description: body.description || null, candidate: body.candidate || null, data: body.data || null,
+        description: body.description || null, candidate: body.candidate || null, data: body.data || null,
         at: Date.now()
       };
 
