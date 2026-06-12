@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Hİ BUBY BURDA</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="video-panel" data-i18n-aria-label="videoArea" aria-label="Görüntülü konuşma">
+        <div class="topbar">
+          <div>
+            <p class="eyebrow" data-i18n="privateRoom">Özel oda</p>
+            <h1>Hİ BUBY BURDA</h1>
+          </div>
+          <div class="top-actions">
+            <div class="language-switch" aria-label="Dil seçimi">
+              <button id="trButton" class="lang-button active" type="button">TR</button>
+              <button id="enButton" class="lang-button" type="button">EN</button>
+            </div>
+          </div>
+          <div class="presence">
+            <span id="statusDot" class="dot"></span>
+            <span id="statusText">Bağlanmaya hazır</span>
+          </div>
+        </div>
+
+        <div class="join-box" id="joinBox">
+          <label>
+            <span data-i18n="yourName">Senin adın</span>
+            <input id="nameInput" autocomplete="name" data-i18n-placeholder="yourNamePlaceholder" placeholder="Adını yaz">
+          </label>
+          <label>
+            <span data-i18n="roomName">Oda adı</span>
+            <input id="roomInput" autocomplete="off" data-i18n-placeholder="roomPlaceholder" placeholder="mesela buby-sohbet">
+          </label>
+          <button id="joinButton" class="primary" data-i18n="joinRoom">Odaya gir</button>
+        </div>
+
+        <div class="videos">
+          <div class="video-card remote">
+            <video id="remoteVideo" autoplay playsinline></video>
+            <div class="video-label" id="remoteLabel" data-i18n="yourFriend">Arkadaşın</div>
+          </div>
+          <div class="video-card local">
+            <video id="localVideo" autoplay muted playsinline></video>
+            <div class="video-label" data-i18n="you">Sen</div>
+          </div>
+        </div>
+
+        <div class="controls" data-i18n-aria-label="callControls" aria-label="Arama kontrolleri">
+          <button id="cameraButton" data-i18n-title="cameraTitle" title="Kamerayı aç veya kapat" disabled>Kamera</button>
+          <button id="micButton" data-i18n-title="micTitle" title="Mikrofonu aç veya kapat" disabled>Mikrofon</button>
+          <button id="callButton" class="call" data-i18n="videoCall" disabled>Görüntülü ara</button>
+          <button id="hangupButton" class="danger" data-i18n="hangup" disabled>Kapat</button>
+        </div>
+      </section>
+
+      <aside class="chat-panel" data-i18n-aria-label="messagesArea" aria-label="Mesajlar">
+        <div class="chat-header">
+          <div>
+            <p class="eyebrow" data-i18n="chat">Mesajlaşma</p>
+            <h2 id="roomTitle" data-i18n="noRoom">Henüz oda yok</h2>
+          </div>
+          <button id="copyButton" data-i18n="copyLink" disabled>Linki kopyala</button>
+        </div>
+
+        <div id="messages" class="messages" aria-live="polite"></div>
+
+        <form id="messageForm" class="message-form">
+          <input id="messageInput" autocomplete="off" data-i18n-placeholder="messagePlaceholder" placeholder="Mesaj yaz..." disabled>
+          <button id="sendButton" data-i18n="send" disabled>Gönder</button>
+        </form>
+      </aside>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
