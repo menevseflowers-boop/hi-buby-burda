@@ -1,0 +1,12 @@
+{
+  "name": "dubai-video-chat",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HI BUBY BURDA mesajlasma ve goruntulu konusma uygulamasi.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: hi-buby-burda
+    env: node
+    plan: free
+    buildCommand: ""
+    startCommand: node server.js
+    healthCheckPath: /health
+    autoDeploy: true
