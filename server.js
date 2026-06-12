@@ -381,7 +381,7 @@ const server = http.createServer(async (req, res) => {
 
 server.on("upgrade", (req, socket) => {
   const url = new URL(req.url, `http://${req.headers.host}`);
-  if (url.pathname === "/ws") {
+  if (url.pathname === "/ws" || url.pathname === "/") {
     handleWsUpgrade(req, socket);
     return;
   }
